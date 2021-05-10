@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
 use Jenssegers\Mongodb\Eloquent\Model;
 
 
  
-class Setting extends Model
+class CabinatePeople extends Model
 {
 
     protected $connection = 'mongodb';
 
-    protected $collection = 'settings';
+    protected $collection = 'cabinate_roles';
   
 
        

@@ -6,12 +6,12 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 
  
-class Setting extends Model
+class Cabinate extends Model
 {
 
     protected $connection = 'mongodb';
 
-    protected $collection = 'settings';
+    protected $collection = 'cabinets';
   
 
        
