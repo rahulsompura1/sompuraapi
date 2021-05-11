@@ -21,7 +21,7 @@ class PassportAuthController extends Controller
             'email' => 'required|email|unique:users',            
         ]);
         if ($Validator->fails()) {
-            return response()->json($Validator->messages(), 401);
+            return response()->json($Validator->messages(), 201);
         }
 
         $user = User::create([
