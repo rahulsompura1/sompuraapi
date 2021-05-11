@@ -17,12 +17,11 @@ class PassportAuthController extends Controller
     public function register(Request $request)
     {
         $Validator = Validator::make($request->all(), [
-            'name' => 'required|min:4',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
+            'name' => 'required',
+            'email' => 'required|email|unique:users',            
         ]);
         if ($Validator->fails()) {
-            return response()->json($Validator->messages(), 201);
+            return response()->json($Validator->messages(), 401);
         }
 
         $user = User::create([
