@@ -49,6 +49,7 @@
             "chmod -R 777 storage",
             "php artisan passport:install --force",
             "php artisan migrate --force",
+            "php artisan config:clear",
             "php artisan cache:clear",
             "php artisan config:cache"
         ],       
@@ -59,6 +60,7 @@
             "php artisan fix:passport",
             "php artisan passport:install --force",
             "php artisan migrate --force",
+            "php artisan config:clear",
             "php artisan cache:clear",
             "php artisan config:cache"
         ],
