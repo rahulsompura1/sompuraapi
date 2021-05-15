@@ -14,15 +14,15 @@ class People extends Model
 
     protected $with = [
         "owner",
-        // "familymembers"
+        "spouse"
     ];
 
     public function owner()
     {
         return $this->belongsTo(Family::class,'family_owner_id');
     }
-    // public function familymembers()
-    // {
-    //     return $this->hasMany(People::class,'family_id1');
-    // }
+    public function spouse()
+    {
+        return $this->belongsTo(People::class,'spouce_id');
+    }
 }
